@@ -22,6 +22,7 @@ class RecyclerViewAdapter(private val context: Context) :
         val itemLayout: LinearLayout = itemView.findViewById(R.id.itemLayout)
         val textViewIdentifier: TextView = itemView.findViewById(R.id.textViewIdentifier)
         val imageViewItem: ImageView = itemView.findViewById(R.id.imageViewItem)
+        val textViewSearch: TextView = itemView.findViewById(R.id.searchtitle)
 
         fun bind(item: ResultSetItem) {
             textViewIdentifier.text = item.identifier
@@ -41,6 +42,7 @@ class RecyclerViewAdapter(private val context: Context) :
             }
         }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)

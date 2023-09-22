@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.unir.app.R
 import kotlinx.coroutines.Dispatchers
@@ -87,8 +88,8 @@ class ItemDetailActivity : AppCompatActivity() {
                 if (proteinData != null) {
                     val dateFormat = SimpleDateFormat("dd/MM/yyyy")
 
-                    textViewId.text = "ID: ${proteinData.rcsb_id}"
-                    textViewTitle.text = "Título: ${proteinData.struct.title}"
+                    textViewId.text = proteinData.rcsb_id
+                    textViewTitle.text = proteinData.struct.title
                     textViewKeywords.text = "Palavras-chave: ${proteinData.struct_keywords.text}"
                     textViewDepositDate.text = "Data de Depósito: ${dateFormat.format(proteinData.rcsb_accession_info.deposit_date)}"
                     textViewReleaseDate.text = "Data de Lançamento: ${dateFormat.format(proteinData.rcsb_accession_info.initial_release_date)}"
@@ -116,6 +117,6 @@ class ItemDetailActivity : AppCompatActivity() {
     }
 
     private fun showToast(message: String) {
-        // Implemente a exibição de mensagens de erro usando Toast ou outro método.
+        Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show()
     }
 }

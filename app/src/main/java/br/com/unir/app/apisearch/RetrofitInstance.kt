@@ -1,6 +1,5 @@
-package br.com.unir.app
+package br.com.unir.app.apisearch
 
-import br.com.unir.app.apisearch.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

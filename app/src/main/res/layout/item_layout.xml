@@ -3,34 +3,45 @@
     android:id="@+id/itemLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/imageViewItem"
         android:layout_width="76dp"
         android:layout_height="83dp"
-        android:layout_gravity="center_vertical"
         android:contentDescription="Imagem do Item"
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder_image" />
 
-    <TextView
-
+    <View
         android:layout_width="8dp"
-        android:layout_height="match_parent"
-         />
+        android:layout_height="match_parent" />
 
-
-    <TextView
-        android:id="@+id/textViewIdentifier"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingEnd="8dp"
-        android:paddingBottom="8dp"
-        android:text="identifier"
-        android:textSize="34sp"
-        android:textStyle="bold" />
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textViewIdentifier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="identifier"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/searchtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="titulo"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>
