@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">App</string>
+    <string name="digite_sua_pesquisa">Digite sua pesquisa</string>
+    <string name="pesquisar">Pesquisar</string>
 </resources>
