@@ -11,10 +11,9 @@
 
     <ImageView
         android:id="@+id/imageViewItem"
-        android:layout_width="76dp"
+        android:layout_width="83dp"
         android:layout_height="83dp"
         android:contentDescription="Imagem do Item"
-        android:scaleType="centerCrop"
         android:src="@drawable/placeholder_image" />
 
     <View
@@ -40,8 +39,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:text="titulo"
             android:textSize="16dp"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
+
     </LinearLayout>
 </LinearLayout>

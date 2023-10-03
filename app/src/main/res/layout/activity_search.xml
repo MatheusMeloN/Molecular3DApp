@@ -27,5 +27,5 @@
         android:layout_height="match_parent"
         android:paddingTop="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_layout" />
+        tools:listitem="@layout/search_item_layout" />
 </LinearLayout>

@@ -43,7 +43,7 @@ class Search : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.IO) {
             try {
                 val response: Response<ApiResponse> =
-                    RetrofitInstance.api.fetchData(
+                    RetrofitSearch.api.fetchData(
                         """{
                             "query": {
                                 "type": "terminal",

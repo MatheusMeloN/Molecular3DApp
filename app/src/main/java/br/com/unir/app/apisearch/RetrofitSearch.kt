@@ -3,7 +3,7 @@ package br.com.unir.app.apisearch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitInstance {
+object RetrofitSearch {
     private val retrofit by lazy {
         Retrofit.Builder()
             .baseUrl("https://search.rcsb.org/")
@@ -11,8 +11,8 @@ object RetrofitInstance {
             .build()
     }
 
-    val api: ApiService by lazy {
-        retrofit.create(ApiService::class.java)
+    val api: SearchService by lazy {
+        retrofit.create(SearchService::class.java)
     }
 }
 

@@ -26,11 +26,11 @@ class ItemDetailActivity : AppCompatActivity() {
     private lateinit var textViewAuthors: TextView
     private lateinit var webView: WebView
 
-    private val apiService by lazy {
-        createApiService()
+    val apiService by lazy {
+        RetrofitData()
     }
 
-    private fun createApiService(): DataService {
+    fun RetrofitData(): DataService {
         val retrofit = Retrofit.Builder()
             .baseUrl("https://data.rcsb.org/rest/v1/core/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -38,9 +38,10 @@ class ItemDetailActivity : AppCompatActivity() {
 
         return retrofit.create(DataService::class.java)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_item_detail)
+        setContentView(R.layout.activity_search_item_detail)
 
         textViewId = findViewById(R.id.textViewId)
         webView = findViewById(R.id.webView)
@@ -65,6 +66,7 @@ class ItemDetailActivity : AppCompatActivity() {
         if (proteinId != null) {
             searchProtein(proteinId)
         }
+
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -75,11 +77,11 @@ class ItemDetailActivity : AppCompatActivity() {
         webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                // Opcional: executar JavaScript após o carregamento da página
-                // webView.loadUrl("javascript:yourJavaScriptFunction();")
+                webView.loadUrl("javascript:yourJavaScriptFunction();")
             }
         }
     }
+
     private fun searchProtein(proteinId: String) {
         GlobalScope.launch(Dispatchers.IO) {
             val proteinData = fetchProteinData(proteinId)
@@ -103,9 +105,11 @@ class ItemDetailActivity : AppCompatActivity() {
         }
     }
 
+
     private suspend fun fetchProteinData(proteinId: String): ProteinDataModel? {
         return try {
-            val response = apiService.getProteinData(proteinId)
+           val response = apiService.getProteinData(proteinId)
+
             if (response.isSuccessful) {
                 response.body()
             } else {
