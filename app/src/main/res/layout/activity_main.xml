@@ -4,4 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="314dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/btIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Introdução"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btBusca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Busca"
+        app:layout_constraintBottom_toBottomOf="@+id/btIntro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/btIntro" />
+
+
+    <Button
+        android:id="@+id/btCQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Compostos Químicos"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="@+id/btIntro"
+        app:layout_constraintStart_toStartOf="@+id/btIntro"
+        app:layout_constraintTop_toBottomOf="@+id/btIntro" />
+
+    <Button
+        android:id="@+id/btPDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="PDB (web)"
+        app:layout_constraintEnd_toEndOf="@+id/btBusca"
+        app:layout_constraintStart_toStartOf="@+id/btBusca"
+        app:layout_constraintTop_toBottomOf="@+id/btBusca" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

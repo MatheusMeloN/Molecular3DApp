@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="azulescuro">#232838</color>
+    <color name="azul">#263A96</color>
+    <color name="azulmarinho">#191E2F</color>
+    <color name="brancodif">#F8F8F8</color>
+    <color name="creme">#F7E2C3</color>
+    <color name="laranja">#FF9A04</color>
+    <color name="amarelo">#F8CF33</color>
+    <color name="cinza">#ABB1C8</color>
 </resources>

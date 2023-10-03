@@ -26,13 +26,14 @@ class RecyclerViewAdapter(private val context: Context) :
 
         fun bind(item: ResultSetItem) {
             textViewIdentifier.text = item.identifier
-            // Carregue a imagem da web usando Glide
+
+
             val img = item.identifier.lowercase()
             val imageUrl =
                 "https://cdn.rcsb.org/images/structures/"+ img +"_assembly-1.jpeg"
             Picasso.get()
                 .load(imageUrl)
-                .placeholder(R.drawable.placeholder_image) // Imagem de espaço reservado
+                .placeholder(R.drawable.placeholder_image)
                 .into(imageViewItem)
 
             itemLayout.setOnClickListener {
@@ -45,7 +46,7 @@ class RecyclerViewAdapter(private val context: Context) :
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.search_item_layout, parent, false)
         return ViewHolder(view)
     }
 

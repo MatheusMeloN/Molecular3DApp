@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imgcomp"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:src="@drawable/comp" />
+
+    <View
+        android:layout_width="8dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="13dp" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coming_soon"
+            android:text="Nome do composto"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso: 60.052 g/mol"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewFormula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fórmula: CH3COOH"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
