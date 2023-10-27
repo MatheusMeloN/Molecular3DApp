@@ -9,33 +9,46 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logo"
-        android:label="Prot3DApp"
-        android:roundIcon="@drawable/logo"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Prot3DModel"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App"
         tools:targetApi="31">
+
         <activity
             android:name=".IntroActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".compound.CompDetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".compound.CompQuimList" />
         <activity
             android:name=".compound.CompQuimList"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".apidata.ItemDetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".apisearch.Search"/>
         <activity
             android:name=".apisearch.Search"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

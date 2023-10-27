@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.ListView
 import br.com.unir.app.R
 import java.io.BufferedReader
@@ -22,7 +23,7 @@ class CompQuimList : AppCompatActivity() {
         val compoundList = mutableListOf<Compound>()
         try {
             val inputStream =
-                assets.open("CompQ.txt") // Substitua "seuarquivo.txt" pelo nome do seu arquivo de bloco de notas
+                assets.open("CompQ.txt")
             val reader = BufferedReader(InputStreamReader(inputStream))
             var line: String?
             val regex = Pattern.compile(",(?=([^\"]*\"[^\"]*\")*(?![^\"]*\"))")
@@ -49,8 +50,9 @@ class CompQuimList : AppCompatActivity() {
             val selectedCompound = compoundList[position]
             val intent = Intent(this, CompDetailActivity::class.java)
             intent.putExtra("compoundName", selectedCompound.name)
+            intent.putExtra("compoundWeight",selectedCompound.weight)
+            intent.putExtra("compoundFormula",selectedCompound.formula)
             startActivity(intent)
-
         }
     }
 }

@@ -3,11 +3,12 @@
     android:id="@+id/itemLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:background="@drawable/background_border_white"
+    android:layout_margin="5dp"
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/imageViewItem"
@@ -26,24 +27,22 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textViewIdentifier"
+            android:id="@+id/tvIdentifier"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:paddingTop="5dp"
             android:text="identifier"
             android:textSize="25dp"
             android:textStyle="bold" />
-
         <TextView
-            android:id="@+id/searchtitle"
+            android:id="@+id/tvTittle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="12dp"
             android:maxLines="2"
             android:ellipsize="end"
-            android:text="titulo"
-            android:textSize="16dp"
-            android:textStyle="normal" />
-
+            />
     </LinearLayout>
 </LinearLayout>

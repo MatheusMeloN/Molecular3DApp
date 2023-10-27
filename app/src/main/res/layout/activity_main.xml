@@ -4,62 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_page"
     tools:context=".MainActivity">
-
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="314dp"
-        android:layout_height="171dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btIntro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39"
         app:srcCompat="@drawable/logo" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btIntro"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@drawable/background_buttom"
+        android:drawableLeft="@drawable/ic_intro"
+        android:padding="15dp"
         android:text="Introdução"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.617"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textColor="@color/amarelo"
+        app:layout_constraintBottom_toTopOf="@+id/btBusca"
+        app:layout_constraintStart_toStartOf="@+id/btBusca" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btBusca"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@drawable/background_buttom"
+        android:drawableLeft="@drawable/ic_search"
+        android:padding="15dp"
         android:text="Busca"
-        app:layout_constraintBottom_toBottomOf="@+id/btIntro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/btIntro" />
+        android:textColor="@color/amarelo"
+        app:layout_constraintBottom_toTopOf="@+id/btCQ"
+        app:layout_constraintStart_toStartOf="@+id/btCQ" />
 
 
-    <Button
-        android:id="@+id/btCQ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Compostos Químicos"
-        android:textSize="11dp"
-        app:layout_constraintEnd_toEndOf="@+id/btIntro"
-        app:layout_constraintStart_toStartOf="@+id/btIntro"
-        app:layout_constraintTop_toBottomOf="@+id/btIntro" />
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btPDB"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_margin="40dp"
+        android:background="@drawable/background_buttom"
+        android:drawableLeft="@drawable/ic_pdb"
+        android:padding="15dp"
         android:text="PDB (web)"
-        app:layout_constraintEnd_toEndOf="@+id/btBusca"
-        app:layout_constraintStart_toStartOf="@+id/btBusca"
-        app:layout_constraintTop_toBottomOf="@+id/btBusca" />
+        android:textColor="@color/amarelo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btCQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@drawable/background_buttom"
+        android:drawableLeft="@drawable/ic_comp"
+        android:padding="15dp"
+        android:text="Compostos Químicos"
+        android:textColor="@color/amarelo"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/btPDB"
+        app:layout_constraintStart_toStartOf="@+id/btPDB" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -67,4 +81,5 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

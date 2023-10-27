@@ -1,8 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.App" parent="Theme.Material3.Light.NoActionBar">
+    <!--    <style name="Base.Theme.App" parent="Theme.Material3.Light.NoActionBar">-->
+    <style name="Base.Theme.App" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/azulmarinho</item>
+        <item name="actionBarTabBarStyle">@drawable/background_buttom</item>
+        <item name="android:textColorPrimary">@color/amarelo</item>
+        <item name="colorPrimaryVariant">@color/azulmarinho</item>
+        <item name="colorOnPrimary">@color/azulmarinho</item>
+        <item name="colorSecondary">@color/laranja</item>
+        <item name="colorPrimaryDark">@color/azulescuro</item>
+        <item name="titleTextColor">@color/amarelo</item>
+<!--        <item name="tint">@color/amarelo</item>-->
+
     </style>
 
     <style name="Theme.App" parent="Base.Theme.App" />

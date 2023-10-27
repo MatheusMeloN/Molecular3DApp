@@ -4,183 +4,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/background_page"
     tools:context=".IntroActivity">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvTittleIntro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/coming_soon"
-        android:text="Introdução"
-        android:textSize="25dp"
-        android:background="@drawable/dashed_underline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tvTittleIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/background_tittle"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Introdução"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvIntro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="texto"
-        android:textSize="11dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTittleIntro" />
+        <TextView
+            android:id="@+id/tvIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="texto"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTittleIntro" />
 
-    <TextView
-        android:id="@+id/tvTittleEp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Estrutura Primária"
-        android:textSize="16dp"
-        android:fontFamily="@font/coming_soon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvIntro" />
+        <TextView
+            android:id="@+id/tvTittleEp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_tittle"
+            android:padding="8dp"
+            android:paddingEnd="100dp"
+            android:text="Estrutura Primária"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIntro" />
 
-    <TextView
-        android:id="@+id/tvEp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="texto"
-        android:textSize="11dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTittleEp" />
+        <TextView
+            android:id="@+id/tvEp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_margin="5dp"
+            android:padding="8dp"
+            android:text="texto"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTittleEp" />
 
-    <ImageView
-        android:id="@+id/imgep"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/img_ep"
-        app:layout_constraintEnd_toEndOf="@+id/tvEp"
-        app:layout_constraintStart_toStartOf="@+id/tvEp"
-        app:layout_constraintTop_toBottomOf="@+id/tvEp" />
+        <ImageView
+            android:id="@+id/imgep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/img_ep"
+            app:layout_constraintEnd_toEndOf="@+id/tvEp"
+            app:layout_constraintStart_toStartOf="@+id/tvEp"
+            app:layout_constraintTop_toBottomOf="@+id/tvEp" />
 
-    <TextView
-        android:id="@+id/tvTittleEs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/coming_soon"
-        android:text="Estrutura Secundária"
-        android:textSize="16dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgep"
-        tools:layout_editor_absoluteY="379dp" />
+        <TextView
+            android:id="@+id/tvTittleEs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_tittle"
+            android:padding="8dp"
+            android:paddingEnd="100dp"
+            android:text="Estrutura Secundária"
+            android:textColor="@color/white"
+            android:textSize="16dp"
 
-    <TextView
-        android:id="@+id/tvEs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="texto"
-        android:textSize="11dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTittleEs" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgep" />
 
-    <ImageView
-        android:id="@+id/imges"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/img_es"
-        app:layout_constraintEnd_toEndOf="@+id/tvEs"
-        app:layout_constraintStart_toStartOf="@+id/tvEs"
-        app:layout_constraintTop_toBottomOf="@+id/tvEs" />
+        <TextView
+            android:id="@+id/tvEs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_margin="5dp"
+            android:padding="8dp"
+            android:text="texto"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTittleEs" />
 
-    <TextView
-        android:id="@+id/tvTittleEt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/coming_soon"
-        android:text="Estrutura Terciária"
-        android:textSize="16dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imges"
-        tools:layout_editor_absoluteY="379dp" />
+        <ImageView
+            android:id="@+id/imges"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/img_es"
+            app:layout_constraintEnd_toEndOf="@+id/tvEs"
+            app:layout_constraintStart_toStartOf="@+id/tvEs"
+            app:layout_constraintTop_toBottomOf="@+id/tvEs" />
 
-    <TextView
-        android:id="@+id/tvEt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="texto"
-        android:textSize="11dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTittleEt" />
+        <TextView
+            android:id="@+id/tvTittleEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_tittle"
+            android:padding="8dp"
+            android:paddingEnd="100dp"
+            android:text="Estrutura Terciária"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imges" />
 
-    <ImageView
-        android:id="@+id/imget"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/img_et"
-        app:layout_constraintEnd_toEndOf="@+id/tvEt"
-        app:layout_constraintStart_toStartOf="@+id/tvEt"
-        app:layout_constraintTop_toBottomOf="@+id/tvEt" />
+        <TextView
+            android:id="@+id/tvEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_margin="5dp"
+            android:padding="8dp"
+            android:text="texto"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTittleEt" />
 
-    <TextView
-        android:id="@+id/tvTittleEq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/coming_soon"
-        android:text="Estrutura Quaternária"
-        android:textSize="16dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imget"
-        tools:layout_editor_absoluteY="379dp" />
+        <ImageView
+            android:id="@+id/imget"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/img_et"
+            app:layout_constraintEnd_toEndOf="@+id/tvEt"
+            app:layout_constraintStart_toStartOf="@+id/tvEt"
+            app:layout_constraintTop_toBottomOf="@+id/tvEt" />
 
-    <TextView
-        android:id="@+id/tvEq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="texto"
-        android:textSize="11dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTittleEq" />
+        <TextView
+            android:id="@+id/tvTittleEq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_tittle"
+            android:padding="8dp"
+            android:paddingEnd="100dp"
+            android:text="Estrutura Quaternária"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imget" />
 
-    <ImageView
-        android:id="@+id/imgeq"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/img_eq"
-        app:layout_constraintEnd_toEndOf="@+id/tvEq"
-        app:layout_constraintStart_toStartOf="@+id/tvEq"
-        app:layout_constraintTop_toBottomOf="@+id/tvEq" />
+        <TextView
+            android:id="@+id/tvEq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_margin="5dp"
+            android:padding="8dp"
+            android:text="texto"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTittleEq" />
 
-    <Button
-        android:id="@+id/btmais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mais informações"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintStart_toStartOf="@id/imgeq"
-        app:layout_constraintTop_toBottomOf="@id/imgeq"
-        app:layout_constraintEnd_toEndOf="@id/imgeq"
-        />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imgeq"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/img_eq"
+            app:layout_constraintEnd_toEndOf="@+id/tvEq"
+            app:layout_constraintStart_toStartOf="@+id/tvEq"
+            app:layout_constraintTop_toBottomOf="@+id/tvEq" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btmais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:background="@drawable/background_buttom"
+            android:drawableLeft="@drawable/ic_more"
+            android:padding="15dp"
+            android:text="Mais informações"
+            android:textColor="@color/amarelo"
+            app:layout_constraintEnd_toEndOf="@id/imgeq"
+            app:layout_constraintStart_toStartOf="@id/imgeq"
+            app:layout_constraintTop_toBottomOf="@id/imgeq" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </ScrollView>

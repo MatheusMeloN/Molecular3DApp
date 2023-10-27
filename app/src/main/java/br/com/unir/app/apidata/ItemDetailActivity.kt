@@ -1,5 +1,7 @@
 package br.com.unir.app.apidata
 
+import RetrofitData
+import RetrofitData.apiService
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.webkit.WebView
@@ -12,8 +14,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import java.text.SimpleDateFormat
 
 class ItemDetailActivity : AppCompatActivity() {
@@ -26,22 +26,12 @@ class ItemDetailActivity : AppCompatActivity() {
     private lateinit var textViewAuthors: TextView
     private lateinit var webView: WebView
 
-    val apiService by lazy {
-        RetrofitData()
-    }
-
-    fun RetrofitData(): DataService {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://data.rcsb.org/rest/v1/core/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        return retrofit.create(DataService::class.java)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_item_detail)
+
+        val apiService = RetrofitData.apiService
 
         textViewId = findViewById(R.id.textViewId)
         webView = findViewById(R.id.webView)
@@ -51,12 +41,12 @@ class ItemDetailActivity : AppCompatActivity() {
         textViewReleaseDate = findViewById(R.id.textViewReleaseDate)
         textViewAuthors = findViewById(R.id.textViewAuthors)
 
-
         // Obtenha o identifier da Intent
         val identifier = intent.getStringExtra("itemIdentifier")
 
         // Construa o URL com base no identifier
-        val url = "https://chemapps.stolaf.edu/jmol/jmol.php?width=100%&height=100%&pdbid=$identifier"
+        val url =
+            "https://chemapps.stolaf.edu/jmol/jmol.php?width=100%&height=100%&pdbid=$identifier"
 
         // Configure a WebView
         setupWebView()
@@ -66,7 +56,6 @@ class ItemDetailActivity : AppCompatActivity() {
         if (proteinId != null) {
             searchProtein(proteinId)
         }
-
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -93,8 +82,10 @@ class ItemDetailActivity : AppCompatActivity() {
                     textViewId.text = proteinData.rcsb_id
                     textViewTitle.text = proteinData.struct.title
                     textViewKeywords.text = "Palavras-chave: ${proteinData.struct_keywords.text}"
-                    textViewDepositDate.text = "Data de Depósito: ${dateFormat.format(proteinData.rcsb_accession_info.deposit_date)}"
-                    textViewReleaseDate.text = "Data de Lançamento: ${dateFormat.format(proteinData.rcsb_accession_info.initial_release_date)}"
+                    textViewDepositDate.text =
+                        "Data de Depósito: ${dateFormat.format(proteinData.rcsb_accession_info.deposit_date)}"
+                    textViewReleaseDate.text =
+                        "Data de Lançamento: ${dateFormat.format(proteinData.rcsb_accession_info.initial_release_date)}"
 
                     val authors = proteinData.audit_author.joinToString { it.name }
                     textViewAuthors.text = "Autores: $authors"
@@ -105,10 +96,14 @@ class ItemDetailActivity : AppCompatActivity() {
         }
     }
 
+//    suspend fun getTittle(proteinId: String): String? {
+//        val proteinData = fetchProteinData(proteinId)
+//        return proteinData?.struct?.title
+//    }
 
-    private suspend fun fetchProteinData(proteinId: String): ProteinDataModel? {
+    suspend fun fetchProteinData(proteinId: String): ProteinDataModel? {
         return try {
-           val response = apiService.getProteinData(proteinId)
+            val response = apiService.getProteinData(proteinId)
 
             if (response.isSuccessful) {
                 response.body()
@@ -121,6 +116,6 @@ class ItemDetailActivity : AppCompatActivity() {
     }
 
     private fun showToast(message: String) {
-        Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
